@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="ccs/jquery.mobile-1.4.5.css" rel="stylesheet"/>
+<link href="ccs/jquery.mobile.theme-1.4.5.css" rel="stylesheet"/>
+
+<link href="ccs/jquery.mobile.structure-1.4.5.min.css" rel="stylesheet"/>
+ 
+<script src="js/jquery-2.1.4.min.js" type="text/javascript"></script> 
+<script src="js/jquery.mobile-1.4.5.js" type="text/javascript" ></script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Documento sin título</title>
+
+<style type="text/css">
+
+p {
+
+text-align:center;
+
+
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div data-role="page" id="principal" data-theme="b">
+	<div data-role ="header">
+    
+    <div data-role="main" class="ui-content">
+    <form class="ui-filterable">
+    <input id="mifiltro"data-type="search" />
+    </form>
+	<p> Encabezado de la aplicacion </p>
+	</div> 
+	<div data-role="content">
+    <p> Opciones de transiciones </p>
+    
+    <ul data-role="listview" " data-filter="true" data-input="#mifiltro" data-autodividers="true" data-inset="true">
+    
+    <li><a href="#segunda" data-transition="slide"> Transicion slide </a></li>
+    
+    <li><a href="#segunda" data-transition="slideup"> Transicion slideup </a></li>
+    
+    <li><a href="#segunda" data-transition="slidedown"> Transicion slidedown </a></li>
+    
+    <li><a href="#segunda" data-transition="flip"> Transicion flip </a></li>
+    
+     <li><a href="#segunda" data-transition="pop"> Transicion pop </a></li>
+    <li><a href="#formulario" data-transition="pop"> Abrir Formulario </a></li>
+    
+     
+    </ul>
+    </div>
+   
+    <div data-role="footer" data-position="fixed">
+    <p> Pie de aplicacion </p>
+	</div>
+    
+    </div>   
+	<div data-role="page" id="segunda" data-theme="a">
+      <div data-role="panel" id="miPanel"> 
+   
+    <h2>Encabezado de Panel</h2>
+    <p> Mis opciones de configuracion.</p>
+    <p> Contenido pagina 2</p>
+    
+  </div> 
+
+    <div data-role="header">
+   <h1>Bienvenido</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#principal" class="ui-btn-active ui-state-persist" data-icon="home">Inicio</a></li>
+        <li><a href="#" data-icon="arrow-r">Enlace Desahabilitado</a></li>
+      </ul>
+    </div>
+    </div>
+
+    <div data-role="content">
+    <div data-role="collapsible">
+    <h1> mas informacion </h1>
+    <p> Contenido pagina 2 </p>
+    
+    </div>
+     <a href="#miPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Abrir Configuración de Panel</a>
+    </div>
+    <div data-role="footer" data-position="fixed">
+    <p> pie de pagina 2 </p>
+    
+       <div data-role="controlgroup" data-type="horizontal">
+      <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Add Me On Facebook</a>
+      <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Add Me On Twitter</a>
+      <a href="#" class="ui-btn ui-corner-all ui-shadow ui-icon-plus ui-btn-icon-left">Add Me On Instagram</a>
+</div>
+</div>
+
+
+
+<div data-role="page" id= "formulario">
+
+
+	<div data-role="heder">
+    <a href="#anylink" class="ui-btn ui-icon-refresh ui-btn-icon-left">Refresh Page</a>
+		<p>Controles formulario</p>
+	</div>
+	</div data-role="content">
+    	  
+            <form method="post" action="">
+      <div class="ui-field-contain">
+        <label for="fname">Nombre Completo:</label>
+        <input type="text" name="fname" id="fname" data-clear-btn="true" placeholder="nombre">
+        <label for="Fecha">Date of Birth:</label>
+        <input type="date" name="Fecha" id="Fecha">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="Tú Email..">
+      </div>
+            <fieldset class="ui-field-contain">
+        <label for="day">Select Day</label>
+        <select name="day" id="day">
+          <optgroup label="Weekdays">
+            <option value="mon">Monday</option>
+            <option value="tue">Tuesday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu">Thursday</option>
+            <option value="fri">Friday</option>
+          </optgroup>
+          <optgroup label="Weekends">
+            <option value="sat">Saturday</option>
+            <option value="sun">Sunday</option>
+          </optgroup>
+        </select>
+      </fieldset>
+      
+           <fieldset>
+        <label for="day">Select As Many Days As You'd Like:</label>
+        <select name="day" id="day" multiple="multiple" data-native-menu="false">
+          <option>Day</option>
+          <option value="mon">Monday</option>
+          <option value="tue">Tuesday</option>
+          <option value="wed">Wednesday</option>
+          <option value="thu">Thursday</option>
+          <option value="fri">Friday</option>
+          <option value="sat">Saturday</option>
+          <option value="sun">Sunday</option>
+        </select>
+      </fieldset>
+
+      <label for="points">Points:</label>
+      <input type="range" name="points" id="points" value="50" min="0" max="100">
+      
+            <label for="switch">Aprobo:</label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+
+
+
+      <input type="submit" data-inline="true" value="Submit">
+    </form>
+
+	</div>
+	<div data-role="footer" data-position="fixer">
+		<p>Pie de pagina</p>
+	</div>
+</div>
+</body>
+</html>
+</body>
+</html>
